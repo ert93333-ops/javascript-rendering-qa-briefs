@@ -23,7 +23,7 @@ Billing is not connected. The MVP uses early-access, demo-request, and purchase-
 
 - Landing page: https://ert93333-ops.github.io/javascript-rendering-qa-briefs/
 - Checklist: https://ert93333-ops.github.io/javascript-rendering-qa-briefs/javascript-seo-checklist.html
-- GitHub Gist checklist: pending marketing task
+- GitHub Gist checklist: https://gist.github.com/ert93333-ops/9c363272bf35f650fa0cab7416d22b7c
 
 ## Marketing Test Links
 
