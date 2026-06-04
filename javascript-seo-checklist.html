@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaScript SEO checklist | JavaScript Rendering QA Briefs</title>
+    <meta
+      name="description"
+      content="Use this JavaScript SEO checklist to review initial HTML, rendered HTML, crawlable links, hash routes, lazy content, blocked resources, and fallback decisions before launch."
+    >
+    <link rel="canonical" href="https://ert93333-ops.github.io/javascript-rendering-qa-briefs/javascript-seo-checklist.html">
+    <meta property="og:title" content="JavaScript SEO checklist">
+    <meta property="og:description" content="A practical prelaunch checklist for JavaScript rendering SEO QA.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://ert93333-ops.github.io/javascript-rendering-qa-briefs/javascript-seo-checklist.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body data-product="JavaScript Rendering QA Briefs">
+    <a class="skip-link" href="#checklist">Skip to checklist</a>
+
+    <header class="site-header" data-header>
+      <div class="shell header-inner">
+        <a class="brand" href="index.html" aria-label="JavaScript Rendering QA Briefs home">
+          <span class="brand-mark" aria-hidden="true">JS</span>
+          <span>JavaScript Rendering QA Briefs</span>
+        </a>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="index.html#workflow">Auditor</a>
+          <a href="index.html#pricing">Pricing</a>
+          <a href="index.html#waitlist">Early access</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="article-hero section">
+        <div class="shell article-layout">
+          <div class="article-copy reveal">
+            <p class="eyebrow">SEO test asset</p>
+            <h1>JavaScript SEO checklist</h1>
+            <p class="hero-subtitle">
+              A prelaunch checklist for teams comparing initial HTML, rendered HTML,
+              crawlable links, JavaScript routes, lazy content, blocked resources, and fallback decisions.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="index.html#workflow" data-track-cta="checklist_audit">Audit sample rendering</a>
+              <a class="button secondary" href="index.html#waitlist" data-track-cta="checklist_waitlist">Request early access</a>
+            </div>
+          </div>
+          <div class="product-preview reveal" aria-label="Checklist preview">
+            <div class="preview-header">
+              <span class="status-dot"></span>
+              <span>prelaunch JavaScript SEO QA</span>
+            </div>
+            <div class="brief-preview">
+              <p class="brief-label">Focus areas</p>
+              <strong>Initial HTML first</strong>
+              <p>Confirm critical metadata, content, links, routes, and render resources are visible or intentionally remediated.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section band" id="checklist">
+        <div class="shell content-narrow">
+          <article class="guide-block reveal">
+            <h2>1. Compare source HTML against rendered HTML</h2>
+            <ol class="guide-list">
+              <li>Check whether the initial HTML contains meaningful body text instead of only an empty app shell.</li>
+              <li>Confirm the initial HTML includes a non-empty title and meta description before JavaScript runs.</li>
+              <li>Compare the rendered H1, primary copy, product details, pricing, review snippets, and internal links against source HTML.</li>
+              <li>Record every critical element that appears only after hydration, client routing, click, scroll, or delayed rendering.</li>
+            </ol>
+          </article>
+
+          <article class="guide-block reveal">
+            <h2>2. Check crawlable links and route patterns</h2>
+            <ol class="guide-list">
+              <li>Prefer real anchors with crawlable `href` values for navigation and discovery paths.</li>
+              <li>Flag `onclick`, `javascript:`, button-only navigation, load-more controls, and fragment-only links.</li>
+              <li>Review hash routes such as `#/products` and decide whether distinct crawlable URLs or pre-rendered route snapshots are needed.</li>
+              <li>Make sure category, product, docs, locale, and paginated routes can be discovered without a user action.</li>
+            </ol>
+          </article>
+
+          <article class="guide-block reveal">
+            <h2>3. Review lazy content and blocked resources</h2>
+            <ol class="guide-list">
+              <li>Flag critical text, images, reviews, recommendations, tabs, or accordions that require click or scroll to load.</li>
+              <li>Check `data-src`, IntersectionObserver, delayed imports, and component-level lazy-loading for above-the-fold content.</li>
+              <li>Confirm `robots.txt`, CDN rules, WAF rules, and auth-like user-agent filters do not block JS, CSS, chunks, fonts, or required render resources.</li>
+              <li>Capture remediation ownership: frontend, SEO, platform, CDN, content, or migration owner.</li>
+            </ol>
+          </article>
+
+          <article class="guide-block reveal">
+            <h2>4. Owner handoff template</h2>
+            <pre class="template-block">JavaScript SEO QA handoff
+
+URL or route:
+Template type:
+Initial HTML issue:
+Rendered-only content:
+Crawlable link issue:
+Hash/fragment route issue:
+Lazy/user-action issue:
+Blocked JS/CSS/resource issue:
+Required fallback:
+Owner:
+Decision:
+Retest date:</pre>
+            <p>
+              JavaScript Rendering QA Briefs turns pasted samples into this owner-ready handoff.
+              It is not a crawler, Search Console replacement, Googlebot emulator, or ranking guarantee.
+            </p>
+          </article>
+
+          <article class="guide-block reveal">
+            <h2>5. Quick risk matrix</h2>
+            <div class="matrix-scroll">
+              <table class="matrix-table">
+                <thead>
+                  <tr>
+                    <th>Risk</th>
+                    <th>Signal</th>
+                    <th>Default action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="table-status danger">High</span></td>
+                    <td>Empty app shell plus missing title/meta in initial HTML.</td>
+                    <td>Add SSR, pre-rendering, static fallback, or source metadata before launch.</td>
+                  </tr>
+                  <tr>
+                    <td><span class="table-status danger">High</span></td>
+                    <td>JS-only navigation or button-only route discovery.</td>
+                    <td>Replace with crawlable anchors and real route URLs.</td>
+                  </tr>
+                  <tr>
+                    <td><span class="table-status warning">Medium</span></td>
+                    <td>Hash routes, fragment-only states, or tabs that represent distinct content.</td>
+                    <td>Define canonical route strategy and decide what should be indexable.</td>
+                  </tr>
+                  <tr>
+                    <td><span class="table-status warning">Medium</span></td>
+                    <td>Lazy content, data-src media, click-to-load reviews, or blocked chunks.</td>
+                    <td>Move critical content into initial/rendered visible HTML and unblock render resources.</td>
+                  </tr>
+                  <tr>
+                    <td><span class="table-status good">Lower</span></td>
+                    <td>Initial HTML contains critical content, crawlable hrefs, and explicit remediation owners.</td>
+                    <td>Run final crawler/Search Console validation when access is available.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <span>JavaScript Rendering QA Briefs</span>
+        <a href="sitemap.xml">Sitemap</a>
+      </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
